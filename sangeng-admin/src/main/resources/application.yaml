@@ -1,0 +1,26 @@
+server:
+  port: 8989
+oss:
+  accessKey: M-Is2zmU7jwDgLSqymuCcoymvnQVYJJff8sftLRw
+  secretKey: XtCTg2oyQSETHMyk7SdeUHhZomgN7BmhK9gy09kJ
+  bucket: lzx-photo
+spring:
+  redis:
+    url: redis://123456@localhost:6379
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  configuration:  #使用configuration进行配置,使用这种方式就不能使用xml的配置方式,二者不能同时存在
+    map-underscore-to-camel-case: true
+      #    日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto

@@ -1,0 +1,5 @@
+com\lzx\admin\controller\TagController.class
+com\lzx\admin\AdminApplication.class
+com\lzx\admin\controller\AdminLoginController.class
+com\lzx\admin\config\SecurityConfig.class
+com\lzx\admin\filiter\JwtAuthenticationTokenFilter.class
