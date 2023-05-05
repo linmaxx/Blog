@@ -23,10 +23,10 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
 mybatis-plus:
+  mapper-locations: classpath:mybatis/mapper/*.xml
   configuration:
 #    日志
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath:/mybatis/com.lzx.admin.mapper/*.xml
   global-config:
     db-config:
       logic-delete-field: delFlag
